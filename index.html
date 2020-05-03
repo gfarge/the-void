@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="">
+
+  <head>
+    <meta charset="utf-8">
+    <title>the-void</title>
+    <style>
+#container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+}
+    </style>
+  </head>
+
+  <body style="background-color:black">
+    <div id="container"></div>
+    <script type = "text/javascript" src="the-void.js"></script>
+    <script>
+      var container = document.getElementById("container")
+      var starfield = new Starfield()
+      starfield.initialize(container)
+      starfield.enterthevoid()
+    </script>
+  </body>
+
+</html>
