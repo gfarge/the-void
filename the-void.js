@@ -9,8 +9,8 @@ function Starfield() {
   this.fps = 10;
   this.height = 0;
   this.width  = 0;
-  this.depth  = 10000;
-  this.stars = 300;
+  this.depth  = 20000;
+  this.stars = 8000;
   this.speed = 100;
   this.view = Math.PI / 2;
   this.Rview = 0;
@@ -65,7 +65,7 @@ Starfield.prototype.enterthevoid = function() {
   // Add stars
   var stars = [];
   for(var ii=0; ii<this.stars; ii++){
-    var star = new Star(this.width * Math.random()*8-4*this.width , this.height*8* Math.random()-4*this.height,this.depth * Math.random(), 20);
+    var star = new Star(this.width * Math.random()*20-10*this.width , this.height*20* Math.random()-10*this.height,this.depth * Math.random(), 20);
     star.cdist = Math.sqrt((this.width/2 - star.x)**2 + (this.height/2 - star.y)**2);
     star.angle = Math.acos((star.x - this.width/2) / star.cdist) * Math.sign(star.y - this.height/2);
     stars[ii] = star
